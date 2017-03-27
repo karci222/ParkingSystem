@@ -17,6 +17,7 @@ class TableRecord():
 		cur = conn.cursor()
 		cur.execute('INSERT INTO SPACES(SPACE_NUM, REGION_NUM, FREE, STAMP) VALUES (?, ?, ?, ?)',  (self.SPACE_NUM, self.REGION_NUM, self.FREE, now)) 
 		conn.commit()
+		cur.execute('REPLACE INTO SPACES_UPDATE (SPACE_NUM, REGION_NUM, FREE, STAMP) VALUES (?, ?, ?, ?)', (self.SPACE_NUM, self.REGION_NUM, self.FREE, now)) 
 		print "Adding to database"
 
 class ScanDelegate(btle.DefaultDelegate):
