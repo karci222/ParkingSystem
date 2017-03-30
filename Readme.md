@@ -10,3 +10,5 @@ Contact:
 E-mail:
 karci.marso@gmail.com
 
+
+In case of emergency use TKINTER
