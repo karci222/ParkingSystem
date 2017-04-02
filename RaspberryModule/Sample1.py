@@ -39,6 +39,7 @@ class ScanDelegate(btle.DefaultDelegate):
 			print charac.propertiesToString()
             	print "there"
 		while True:
+		   try:
 			for charac in chars:
 				if(charac.uuid == "0000ffee-0000-1000-8000-00805f9b34fb" or charac.uuid == "0000bab1-0000-1000-8000-00805f9b34fb" or charac.uuid == "0000bab2-0000-1000-8000-00805f9b34fb"):
 					s = charac.read()
@@ -64,6 +65,8 @@ class ScanDelegate(btle.DefaultDelegate):
 				i = i + 1
 
 			time.sleep(0.7)
+		   except Exception as e:
+			print e
         elif isNewData:
             print "Received new data from", dev.addr
 
@@ -74,7 +77,7 @@ class NotificationDelegate(btle.DefaultDelegate):
 	print "notification"
 
 
-con = sqlite3.connect('/home/pi/testDb1.db')
+con = sqlite3.connect('/home/pi/testDb1.db', timeout = 30)
 
 scanner = btle.Scanner().withDelegate(ScanDelegate())
 devices = scanner.scan(10.0)

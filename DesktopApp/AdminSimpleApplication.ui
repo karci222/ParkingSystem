@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface>
+  <object class="tk.Frame" id="Frame_13">
+    <property name="height">200</property>
+    <property name="width">200</property>
+    <layout>
+      <property name="column">0</property>
+      <property name="propagate">True</property>
+      <property name="row">0</property>
+    </layout>
+    <child>
+      <object class="tk.Label" id="Label_1">
+        <property name="font">TkFixedFont</property>
+        <property name="padx">50</property>
+        <property name="pady">15</property>
+        <property name="takefocus">false</property>
+        <property name="text" translatable="yes">Number of spaces:</property>
+        <property name="underline">0</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="Label_2">
+        <property name="padx">50</property>
+        <property name="pady">15</property>
+        <property name="text" translatable="yes">Number of free spaces:</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Label" id="Label_3">
+        <property name="padx">50</property>
+        <property name="pady">15</property>
+        <property name="text" translatable="yes">Number of occupied spaces:</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="reload_button">
+        <property name="state">normal</property>
+        <property name="text" translatable="yes">Reload</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="padx">50</property>
+          <property name="pady">15</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+          <property name="sticky">se</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="number_of_spaces">
+        <property name="text" translatable="yes">
+</property>
+        <property name="underline">0</property>
+        <property name="width">0</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="padx">50</property>
+          <property name="pady">15</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="number_of_free_spaces">
+        <property name="text" translatable="yes">
+</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="padx">50</property>
+          <property name="pady">15</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="number_of_occupied_spaces">
+        <property name="cursor">arrow</property>
+        <property name="takefocus">true</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="padx">50</property>
+          <property name="pady">15</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>
